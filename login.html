@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie Trailer Site Part 1</title>
+	<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <style>
+        body{
+            background-color: #2c3e50;
+            background-image: url("images/stretched-1366-768-978142.png");
+        }
+        .form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 350px;
+            margin: 12em auto;
+        }
+        .inputfield{
+            border: none;
+            outline: none;
+            width: 350px;
+            color: #fff;
+            font-size: 24px;
+            padding: 10px 0;
+            border-bottom: 2px solid #fff;
+            background: transparent;
+            text-transform: capitalize;
+            margin-bottom: 25px;
+        }
+        .button,.home{
+            background-color: #fff;
+            color: #2c3e50;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-top: 24px;
+            box-shadow: 0 15px 55px #fff;
+        }
+    </style>
+</head>
+<body>
+<form class="form">
+    <input type="email" class="inputfield animated infinite" placeholder="email address" required="">
+    <input type="password" class="inputfield animated infinite" placeholder="Password" required="">
+    <a href="index.html"><input type="submit" class="inputfield button animated " value="Submit" placeholder="email address" required=""></a>
+    <a href="index.html"><p class="home">Back to home</p></a>
+</form>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+$('input').keyup(function(){
+    $(this).addClass('jello');
+});
+$('input').focusout(function(){
+    $(this).removeClass('jello');
+});
+$('.button').hover(function(){
+    $(this).toggleClass('tada');
+});
+</script>
+</body>
+</html>

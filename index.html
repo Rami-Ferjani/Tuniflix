@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TrailerFLIX</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<div class="wrapper">
+	<div class="bgslide">
+		<div class="nav">
+			<div class="logo">
+				<img src="images/logo.png">
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">UPCOMING</a></li>
+					<li><a href="signup.html">SIGN UP</a></li>
+					<li><a href="login.html">LOGIN</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="play_button">
+			<img src="images/play.png">
+		</div>
+	</div>
+
+	<div class="movieposter">
+		<h3>Popular Movies</h3>
+		<hr>
+		<div class="movie-trailer-grid">
+			<div class="trailer1">
+				<a href="spiderman.html">
+					<img src="images/a1.jpg">
+				</a>
+			</div>
+			<div class="trailer1">
+				<a href="mib.html">
+					<img src="images/a2.jpg">
+				</a>
+			</div>
+			<div class="trailer1">
+				<a href="aladdin.html">
+					<img src="images/a3.jpg">
+				</a>
+			</div>
+			<div class="trailer1 trailer-last">
+				<a href="pikachu.html">
+					<img src="images/a4.jpg">
+				</a>
+			</div>
+		</div>
+		<a href="#" class="viewall">View All</a>
+	</div>
+
+
+	<div class="movieposter">
+		<h3>Must Watch</h3>
+		<hr>
+		<div class="movie-trailer-grid">
+			<div class="trailer1">
+				<a href="infinitywar.html">
+					<img src="images/m1.jpg">
+				</a>
+			</div>
+			<div class="trailer1">
+				<a href="ironman3.html">
+					<img src="images/m2.jpg">
+				</a>
+			</div>
+			<div class="trailer1">
+				<a href="harrypotter.html">
+					<img src="images/m3.jpg">
+				</a>
+			</div>
+			<div class="trailer1 trailer-last">
+				<a href="civil war.html">
+					<img src="images/m4.jpg">
+				</a>
+			</div>
+		</div>
+		<a href="#" class="viewall">View All</a>
+	</div>
+
+	<div class="sub">
+		<p>Get the best Movies trailers straight in your <br>inbox each week</p>
+		<form class="myform" method="post" action="">
+			<input type="email" name="" class="email" placeholder="Email Address" required="">
+			<input type="submit" name="" class="submit" value="Subscribe">
+		</form>
+	</div>
+
+	<div class="footer">
+		<h1>TRAILER<b>FLIX</b></h1>
+		<p>Rami Ferjani | LA1 INFO TD2</p>
+		<p>ISIMM 2018-2019</p>
+	</div>
+
+</div>
+
+<!-- Video Modal -->
+<div class="video_modal">
+	<div class="closebtn">X</div>
+	<video id="myvideo" width="80%" height="auto" controls >
+		<source src="video/endgame.mp4" type="video/mp4">
+		<source src="video/endgame.mp4" type="video/ogg">
+	</video>
+</div>
+
+
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var $playbtn = $(".play_button"),
+		$openvid = $(".video_modal"),
+		$closevid = $(".closebtn"),
+		$video = $("#myvideo").get(0);
+
+		$playbtn.click(function(){
+			$openvid.fadeIn();
+			$video.load();
+		});
+
+		$closevid.click(function(){
+			$openvid.fadeOut();
+		});
+	});
+</script>
+</body>
+</html>
